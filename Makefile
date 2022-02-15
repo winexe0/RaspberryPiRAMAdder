@@ -5,7 +5,7 @@ CFLAGS =
 all: clean RaspberryPiRAMAdder 
 
 RaspberryPiRAMAdder: main.cpp
-	$(CC) -o scalc main.cpp $(CFLAGS)
+	$(CC) -o RaspberryPiRAMAdder main.cpp $(CFLAGS)
 
 clean:
 	rm -f RaspberryPiRAMAdder
