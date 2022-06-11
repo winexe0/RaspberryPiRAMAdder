@@ -28,8 +28,8 @@ using namespace std;
 int main(int argc, char **argv) {
     string restart;
     system("sudo systemctl stop zram");
-    system("sudo systemctl mask zram");
-    system("sudo rm /etc/modules-load.d/zram.conf /etc/modprobe.d/zram.conf /etc/udev/rules.d/");
+    system("sudo systemctl disable zram");
+    system("sudo rm /etc/modules-load.d/zram.conf /etc/modprobe.d/zram.conf /etc/udev/rules.d/99-zram.rules");
     cout << "1 Gigabyte of extra RAM has been removed on your Raspberry Pi. It has to be restarted so the changes made to it can take effect. Do you want to restart? (y/n)" << endl;
 	cin >> restart;
 	if (restart == "y") {
